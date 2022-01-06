@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio de Imágenes</title>
+</head>
+<body>
+    <h2>IMÁGENES EN EL REPOSITORIO</h2>
+    - let cadenaHref;
+    - let cadenaPathImagen;
+    ol
+        each nombreImagen in nombresImagenes
+            - cadenaHref = '/imagen/' + nombreImagen
+            li
+                a(href=cadenaHref) #{nombreImagen}
+        else
+            li No hay imágenes en el repositorio.
+    each nombreImagen in nombresImagenes
+        - cadenaPathImagen = "/images/" + nombreImagen;
+        img(src=cadenaPathImagen width="300px")
+    else
+        h1 No hay imágenes en el repositorio.
+</body>
+</html>

@@ -1,0 +1,20 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Información sobre la Imagen
+    body
+        h2 INFORMACIÓN SOBRE LA IMAGEN
+        p.
+            #[strong Nombre : ] #{nombreImagen}
+        p.
+            #[strong Tamaño : ] #{stats.size} Bytes
+
+        - let pathImagen    = "/images/" + nombreImagen;
+        - let pathEliminar  = "/eliminar/" + nombreImagen;
+        
+        img(src=pathImagen width="700px")
+        form(action=pathEliminar)
+            input(type="submit" name="botonAceptar" value="Eliminar Imagen")
